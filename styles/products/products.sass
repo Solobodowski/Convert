@@ -1,1 +1,62 @@
 .products
+    display: flex
+    justify-content: center
+    margin-top: 78px
+    
+    &__content
+        max-width: 1450px
+        width: 80%
+
+    &__title
+        font-family: 'Roboto', sans-serif
+        font-weight: $boldestWeight
+        font-size: $largeText
+        margin-bottom: 51px
+
+    &__container
+        display: grid 
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        grid-gap: 6.2%
+        align-items: stretch
+
+    &__item
+        display: flex
+        flex-direction: column
+        font-family: 'Roboto', sans-serif
+        text-decoration: none
+        color: $cod-gray
+
+        &:hover
+            opacity: 0.8
+            transition: 0.3s
+
+    &__itemImage
+        flex-grow: 1
+        max-width: 100%
+
+    &__itemTitle
+        font-size: $bigText
+        line-height: $bigLineHeight
+        font-weight: $boldWeight
+        margin-bottom: 11px
+
+    &__itemSubtitle
+        font-size: $mediumText
+        line-height: $mediumLineHeight
+        font-weight: $boldWeight
+        margin-bottom: 9px
+
+    &__itemDescription
+        font-size: $mediumText
+        line-height: $largeLineHeight
+        font-weight: $lightWeight
+        margin-bottom: 18px
+        max-height: 164px
+        overflow: hidden
+
+    &__itemLink
+        font-size: $smallText
+        line-height: $smallLineHeight
+        font-weight: $mediumWeight
+        color: $sapphire
+        text-decoration: underline
