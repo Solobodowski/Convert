@@ -1,58 +1,119 @@
 .products
     display: flex
     justify-content: center
-    margin-top: 78px
+    margin: 78px 0 
     
     &__content
-        max-width: 1450px
         width: 80%
+        max-width: 1450px
+
+        +max(850)
+            width: 100%
+            margin: 0 40px
 
     &__title
+        margin-bottom: 51px
         font-family: 'Roboto', sans-serif
         font-weight: $boldestWeight
         font-size: $largeText
-        margin-bottom: 51px
 
     &__container
         display: grid 
         grid-template-columns: 1fr 1fr 1fr 1fr
-        grid-gap: 6.2%
+        grid-gap: 6.2% 
         align-items: stretch
+
+        +max(1024)
+            grid-template-columns: 1fr 1fr
+
+        +max(850)
+            grid-template-columns: 1fr
+            grid-gap: 0
 
     &__item
         display: flex
         flex-direction: column
+        justify-content: space-between
         font-family: 'Roboto', sans-serif
         text-decoration: none
         color: $cod-gray
-
+        
         &:hover
             opacity: 0.8
             transition: 0.3s
 
+        +max(1024)
+            align-items: flex-start
+
+        +max(850)
+            flex-direction: row
+            padding: 50px 32px 50px 0
+            border-bottom: $itemBorder
+
+        +max(700)
+            padding-right: 0
+
+            &:last-child
+                border-bottom: 0
+
+        +max(650)
+            flex-direction: column
+            align-items: flex-start
+        
+        +max(500)
+            padding: 40px 0
+
+    &__itemContent
+        display: flex
+        flex-direction: column
+        height: 100%
+
+    &__itemImageBox
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-shrink: 0
+        max-height: 400px
+        height: 100%
+
+        +max(850)
+            flex-shrink: 1
+
+
     &__itemImage
-        flex-grow: 1
-        max-width: 100%
+        width: 100%
+        height: 100%
+        object-fit: contain
+
+        +max(500)
+            width: 100%
+            margin-right: 0
 
     &__itemTitle
+        margin-bottom: 11px
         font-size: $bigText
         line-height: $bigLineHeight
         font-weight: $boldWeight
-        margin-bottom: 11px
-
+        
     &__itemSubtitle
+        margin-bottom: 9px
         font-size: $mediumText
         line-height: $mediumLineHeight
         font-weight: $boldWeight
-        margin-bottom: 9px
 
     &__itemDescription
+        margin-bottom: 18px
+        max-height: 164px
         font-size: $mediumText
         line-height: $largeLineHeight
         font-weight: $lightWeight
-        margin-bottom: 18px
-        max-height: 164px
         overflow: hidden
+
+        +max(850)
+            max-height: 100%
+
+        +max(500)
+            max-height: 164px
 
     &__itemLink
         font-size: $smallText
