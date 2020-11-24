@@ -287,6 +287,12 @@ table {
      object-fit: contain;
 }
 
+@media (max-width: 1024px) {
+  .products__itemImage {
+    justify-self: flex-start;
+  }
+}
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .products__itemImage {
     height: auto;
