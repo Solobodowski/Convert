@@ -6,14 +6,6 @@ $(document).ready(function(){
         getTallestHeaderHeight('.products__itemSubtitle');
     }
 
-    // $( window ).resize(function() {
-    //     if ($(window).width() > 850)
-    //     {
-    //         getTallestHeaderHeight('.products__itemTitle');
-    //         getTallestHeaderHeight('.products__itemSubtitle');
-    //     }
-    // });
-
     function getTallestHeaderHeight(itemElement) {
          let max = 0;
         $(itemElement).each(function(){
